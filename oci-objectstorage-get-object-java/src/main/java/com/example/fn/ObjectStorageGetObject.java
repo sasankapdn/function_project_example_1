@@ -167,8 +167,8 @@ public class ObjectStorageGetObject {
             System.err.println("Finished reading content for object " + objectInfo.getName());
 
         } catch (Throwable e) {
-            System.err.println("Error fetching object " + e.getMessage());
-            result = "Error fetching object " + e.getMessage();
+            System.err.println("Error fetching object " + e.getStackTrace().toString());
+            result = "Error fetching object " + e.getStackTrace().toString();
         }
 
         return result;
